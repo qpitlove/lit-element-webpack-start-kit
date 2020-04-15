@@ -1,9 +1,7 @@
-# LitElement tutorial
+# LitElement Webpack Start kit
 
-This tutorial shows you how to set up a basic LitElement project and create your first view.
-
-Tutorial: https://vaadin.com/tutorials/lit-element/starting-a-lit-element-project
-Video: https://youtu.be/UcCsGZDCw-Q
+This tutorial shows you how to set up a basic LitElement project by webpack with polyfills and es5 umd format support Legacy browser.
+This start kit was inspired by the [lit-element/starting-a-lit-element-project](https://vaadin.com/tutorials/lit-element/starting-a-lit-element-project) and Video. https://youtu.be/UcCsGZDCw-Q
 
 ### Run Webpack-dev-server
 ```sh
