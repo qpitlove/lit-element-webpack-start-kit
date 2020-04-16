@@ -6,15 +6,35 @@
     <title>Todo</title>
 
     <link rel="icon" type="image/png" href="./img/icons/favicon.png" />
-
-    <script>this.customElements||document.write('<script src="./vendor/document-register-element.js"><\x2fscript>');</script>
+    <!-- <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script> -->
+    <!-- <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"></script>
+    <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script> -->
+    <script src="./vendor/document-register-element.js"></script>
     <script src="./vendor/custom-elements-es5-adapter.js"></script>
     <script src="./vendor/webcomponents-loader.js"></script>
-
   </head>
   <body>
+    <script>
+      window.onerror = function (e) {
+        console.error(e);
+      };
+    </script>
     <header><h1>Todo app</h1></header>
 
-    <main><todo-view></todo-view></main>
+    <main>
+      <ul>
+        <li>
+          <p><current-time>current-time loading...</current-time></p>
+          <p><strong>custom-element(with polyfill) support Android 2.2+, ie 8+</strong></p>
+        </p></li>
+        <li>
+          <p><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></p>
+          <p><strong>lit-html support android 4.4+, ie 11</strong></p></li>
+        <li>
+          <p><todo-view>todo-view loading...</todo-view></p>
+          <p><strong>lit-element support android chrome</strong></p>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>

@@ -3,7 +3,7 @@ import { LitElement, html } from 'lit-element';
 class TodoView extends LitElement {
   render() {
     return html`
-      <p>todo-view</p>
+      todo-view
     `;
   }
 }
