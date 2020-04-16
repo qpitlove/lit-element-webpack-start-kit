@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+
+    <link rel="icon" type="image/png" href="imgs/icons/favicon.png" />
+    <!-- <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
+    <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"></script>
+    <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script> -->
+    <script src="./vendor/document-register-element.js"></script>
+    <script src="./vendor/custom-elements-es5-adapter.js"></script>
+    <script src="./vendor/webcomponents-loader.js"></script>
+  <link href="main.css" rel="stylesheet"></head>
+  <body>
+    <script>
+      window.onerror = function (e) {
+        console.error(e);
+      };
+    </script>
+    <header><h1>Todo app</h1></header>
+
+    <main>
+      <ul>
+        <li>
+          <p><current-time>current-time loading...</current-time></p>
+          <p><strong>custom-element(with polyfill) support android 4.2+</strong></p>
+        </li>
+        <li>
+          <p><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></p>
+          <p><strong>lit-html support android 4.4+</strong></p>
+        </li>
+        <li>
+          <p><current-time-lit-element>current-time-lit-element loading...</current-time-lit-element></p>
+          <p><strong>lit-element support android chrome</strong></p>
+        </li>
+      </ul>
+    </main>
+  <script src="main.js"></script><script src="currentTime.js"></script><script src="currentTimeLitHtml.js"></script><script src="currentTimeLitElement.js"></script></body>
+</html>
