@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["currentTime"] = factory();
+		exports["CurrentTime"] = factory();
 	else
-		root["currentTime"] = factory();
+		root["CurrentTime"] = factory();
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
