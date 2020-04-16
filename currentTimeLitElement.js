@@ -11085,22 +11085,22 @@ function current_time_lit_element_isNativeReflectConstruct() { if (typeof Reflec
 
 
 
-var current_time_lit_element_currentTimeLitElement = /*#__PURE__*/function (_LitElement) {
-  inherits_default()(currentTimeLitElement, _LitElement);
+var current_time_lit_element_CurrentTimeLitElement = /*#__PURE__*/function (_LitElement) {
+  inherits_default()(CurrentTimeLitElement, _LitElement);
 
-  var _super = current_time_lit_element_createSuper(currentTimeLitElement);
+  var _super = current_time_lit_element_createSuper(CurrentTimeLitElement);
 
-  function currentTimeLitElement() {
-    classCallCheck_default()(this, currentTimeLitElement);
+  function CurrentTimeLitElement() {
+    classCallCheck_default()(this, CurrentTimeLitElement);
 
     // 클래스 초기화. 속성이나 하위 노드는 접근할 수는 없다.
     return _super.call(this);
   }
 
-  createClass_default()(currentTimeLitElement, [{
+  createClass_default()(CurrentTimeLitElement, [{
     key: "connectedCallback",
     value: function connectedCallback() {
-      get_default()(getPrototypeOf_default()(currentTimeLitElement.prototype), "connectedCallback", this).call(this);
+      get_default()(getPrototypeOf_default()(CurrentTimeLitElement.prototype), "connectedCallback", this).call(this);
 
       this.now = new Date().toLocaleString(this.locale);
       this.start();
@@ -11108,7 +11108,7 @@ var current_time_lit_element_currentTimeLitElement = /*#__PURE__*/function (_Lit
   }, {
     key: "disconnectedCallback",
     value: function disconnectedCallback() {
-      get_default()(getPrototypeOf_default()(currentTimeLitElement.prototype), "disconnectedCallback", this).call(this);
+      get_default()(getPrototypeOf_default()(CurrentTimeLitElement.prototype), "disconnectedCallback", this).call(this);
 
       this.stop();
     }
@@ -11147,10 +11147,10 @@ var current_time_lit_element_currentTimeLitElement = /*#__PURE__*/function (_Lit
     }
   }]);
 
-  return currentTimeLitElement;
+  return CurrentTimeLitElement;
 }(lit_element_LitElement);
 
-customElements.define("current-time-lit-element", current_time_lit_element_currentTimeLitElement);
+customElements.define("current-time-lit-element", current_time_lit_element_CurrentTimeLitElement);
 
 /***/ })
 /******/ ]);
