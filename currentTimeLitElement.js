@@ -11070,7 +11070,7 @@ lit_element_LitElement.render = shady_render_render;
 
 
 function _templateObject() {
-  var data = taggedTemplateLiteral_default()(["<strong>now:</strong> ", ""]);
+  var data = taggedTemplateLiteral_default()(["", ""]);
 
   _templateObject = function _templateObject() {
     return data;

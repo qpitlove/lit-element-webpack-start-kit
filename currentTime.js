@@ -1770,7 +1770,7 @@ var CurrentTime = /*#__PURE__*/function (_HTMLElement) {
       // `document.querySelector('current-time').start()`로 호출할 수 있다.
       this.stop();
       this._timer = window.setInterval(function () {
-        _this.innerHTML = "<strong>now:</strong> ".concat(new Date().toLocaleString(_this.locale));
+        _this.innerHTML = "".concat(new Date().toLocaleString(_this.locale));
       }, 1000);
     }
   }, {

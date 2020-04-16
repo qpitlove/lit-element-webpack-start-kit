@@ -6812,7 +6812,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_3___default()(["<strong>now:</strong> ", ""]);
+  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_3___default()(["", ""]);
 
   _templateObject = function _templateObject() {
     return data;
