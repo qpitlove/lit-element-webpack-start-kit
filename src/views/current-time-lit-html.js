@@ -29,7 +29,6 @@ class CurrentTimeLitHTML extends HTMLElement {
     this.stop();
     this._timer = window.setInterval(() => {
       render(html`<strong>now:</strong> ${new Date().toLocaleString(this.locale)}`, this);
-      // this.innerText = new Date().toLocaleString(this.locale);
     }, 1000);
   }
   stop() {

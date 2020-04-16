@@ -1,8 +1,9 @@
 import "./styles.css";
 
-import "./views/current-time.js";
-import "./views/current-time-lit-html.js";
-import "./views/todo-view.js";
+// import "./views/current-time.js";
+// import "./views/current-time-lit-html.js";
+// import "./views/current-time-lit-element.js";
+// import "./views/todo-view.js";
 
 // async function registerSW() {
 //   if ("serviceWorker" in navigator) {

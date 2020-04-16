@@ -36,8 +36,8 @@ const polyfills = [
 
 const assets = [
   {
-    from: "src/img",
-    to: "img/",
+    from: "public/imgs",
+    to: "imgs/",
   },
 ];
 
@@ -46,7 +46,7 @@ const plugins = [
   new webpack.ProgressPlugin(),
   new HtmlWebpackPlugin({
     filename: "index.html",
-    template: "./src/index.html",
+    template: "./public/index.html",
     minify: false,
   }),
   new CopyWebpackPlugin([...polyfills, ...assets], {
@@ -58,9 +58,13 @@ module.exports = ({ mode, presets }) => {
   return webpackMerge(
     {
       mode,
-      // entry: {
-      //   main: "./src", // DEFAULT builtIn
-      // },
+      entry: {
+        main: ["./src"], // DEFAULT builtIn
+        // todoView: ["./src/views/todo-view.js"],
+        currentTime: ["./src/views/current-time.js"],
+        currentTimeLitHtml: ["./src/views/current-time-lit-html.js"],
+        currentTimeLitElement: ["./src/views/current-time-lit-element.js"],
+      },
       output: {
         // Make sure to use [name] or [id] in output.filename
         //  when using multiple entry points
