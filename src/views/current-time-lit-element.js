@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit-element";
 
-class currentTimeLitElement extends LitElement {
+class CurrentTimeLitElement extends LitElement {
   constructor() {
     // 클래스 초기화. 속성이나 하위 노드는 접근할 수는 없다.
     super();
@@ -37,4 +37,4 @@ class currentTimeLitElement extends LitElement {
   }
 }
 
-customElements.define("current-time-lit-element", currentTimeLitElement);
+customElements.define("current-time-lit-element", CurrentTimeLitElement);
