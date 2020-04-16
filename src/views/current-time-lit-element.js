@@ -33,7 +33,7 @@ class CurrentTimeLitElement extends LitElement {
     }
   }
   render() {
-    return html`<strong>now:</strong> ${this.now}`;
+    return html`${this.now}`;
   }
 }
 

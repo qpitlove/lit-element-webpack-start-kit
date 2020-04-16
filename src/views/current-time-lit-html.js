@@ -28,7 +28,7 @@ class CurrentTimeLitHTML extends HTMLElement {
     // `document.querySelector('current-time').start()`로 호출할 수 있다.
     this.stop();
     this._timer = window.setInterval(() => {
-      render(html`<strong>now:</strong> ${new Date().toLocaleString(this.locale)}`, this);
+      render(html`${new Date().toLocaleString(this.locale)}`, this);
     }, 1000);
   }
   stop() {
