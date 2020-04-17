@@ -60,10 +60,9 @@ module.exports = ({ mode, presets }) => {
       mode,
       entry: {
         main: ["./src"], // DEFAULT builtIn
-        // TodoView: ["./src/views/todo-view.js"],
-        CurrentTime: ["./src/views/current-time.js"],
-        CurrentTimeLitHtml: ["./src/views/current-time-lit-html.js"],
-        CurrentTimeLitElement: ["./src/views/current-time-lit-element.js"],
+        currentTime: ["./src/components/current-time.js"],
+        currentTimeLitHtml: ["./src/components/current-time-lit-html.js"],
+        currentTimeLitElement: ["./src/components/current-time-lit-element.js"],
       },
       output: {
         // Make sure to use [name] or [id] in output.filename
