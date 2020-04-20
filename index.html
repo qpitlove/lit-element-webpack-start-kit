@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo</title>
+    <title>Emultate Support Browser</title>
 
     <link rel="icon" type="image/png" href="imgs/icons/favicon.png" />
-    <!-- <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
-    <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"></script>
-    <script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script> -->
-    <script src="./vendor/custom-elements-es5-adapter.js"></script>
-    <script src="./vendor/webcomponents-loader.js"></script>
-    <script src="//unpkg.com/document-register-element"></script><!-- only support customElements for android 4.2+, ie8+ -->
+
+    <!-- https://qpitlove.github.io/open-wc-app/ 참고하여 IE 11에서 동작하는 폴리필을 기능 사용여부 체크하여 직접 CDN 경로로 삽입함 -->
+    <script>('noModule' in HTMLScriptElement.prototype)||document.write('<script src="//unpkg.com/core-js-bundle@3.6.5/minified.js"><\x2fscript>');</script>
+    <!-- <script>('fetch' in window)||document.write('<script src="//unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"><\x2fscript>');</script> -->
+    <script>('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-bundle.js"><\x2fscript>');</script>
+    <script>('noModule' in HTMLScriptElement.prototype || 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"><\x2fscript>');</script>
+    <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>customElements polyfill only for android < 4.4, ie < 11
   <link href="main.css" rel="stylesheet"></head>
   <body>
     <script>
@@ -25,16 +26,20 @@
       <ul>
         <li>
           <p><strong><current-time>current-time loading...</current-time></strong></p>
-          <p>only custom-element polyfill (with document-register-element) support android 2.2+, ie 10+</p>
+          <p>old custom-element(document-register-element) polyfill support android 2.2+, ie 10+</p>
         </li>
         <li>
           <p><strong><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></strong></p>
-          <p>lit-html <stoong>without shdowdom</strong> (with document-register-element) android 4.2+, (ie 11 with webcomponents.js custom-elements-es5-adapter polyfill)</p>
+          <p>lit-html <stoong>without shdowdom</strong> (with document-register-element) support android 4.2+, (ie 11 with core-js-bundle, webcomponentsjs.js polyfills)</p>
         </li>
         <li>
           <p><strong><current-time-lit-element>current-time-lit-element loading...</current-time-lit-element></strong></p>
-          <p>lit-element/lit-html <strong>with shdowdom</strong> android chrome, mobile safari (ie 11 with webcomponents.js, custom-elements-es5-adapter, system.js polyfills)</p>
-          <p><strong>ie 11+ support demo</strong> <a href="https://qpitlove.github.io/open-wc-app" target="_blank">open-wc-app</a> from build <a href="https://open-wc.org/" target="_blank">npm init @open-wc</a></p>
+          <p>lit-element/lit-html <strong>with shdowdom</strong> native support android chrome 60+/mobile safari (android 4.4 default, ie 11 with core-js-bundle, webcomponentsjs.js polyfills)</p>
+          <p>
+            <strong>android 4.4 default(ex- samsung internet)/ie 11+ support demo</strong>
+            <a href="https://qpitlove.github.io/todo-web-components" target="_blank">todo-web-components</a>
+            <a href="https://qpitlove.github.io/open-wc-app" target="_blank">open-wc-app</a> from build <a href="https://open-wc.org/" target="_blank">npm init @open-wc</a>
+          </p>
         </li>
       </ul>
     </main>
