@@ -11140,6 +11140,9 @@ var current_time_lit_element_CurrentTimeLitElement = /*#__PURE__*/function (_Lit
     key: "properties",
     get: function get() {
       return {
+        locale: {
+          type: String
+        },
         now: {
           type: String
         }
