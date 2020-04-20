@@ -7,6 +7,7 @@ class CurrentTimeLitElement extends LitElement {
   }
   static get properties() {
     return {
+      locale: {type: String},
       now: { type: String },
     };
   }
