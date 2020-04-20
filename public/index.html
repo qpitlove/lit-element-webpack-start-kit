@@ -22,26 +22,29 @@
         console.error(e);
       };
     </script>
-    <header><h1>WC Support Test</h1></header>
-
+    <header><h3>WebComponent Support Test</h3></header>
     <main>
       <ul>
         <li>
-          <p><strong><current-time>current-time loading...</current-time></strong></p>
-          <p>old custom-element(document-register-element) polyfill support android 2.2+, ie 10+</p>
+          <p><strong style="background-color:lightgray"><current-time>current-time loading...</current-time></strong></p>
+          <p>only custom-element(with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> polyfill) support android 2.2+, ie 10+</p>
         </li>
         <li>
-          <p><strong><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></strong></p>
-          <p>lit-html <stoong>without shdowdom</strong> (with document-register-element) support android 4.2+, (ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a>, <a href="https://caniuse.com/#search=attachShadow" target="_blank">webcomponentsjs.js</a> polyfills)</p>
-        </li>
-        <li>
-          <p><strong><current-time-lit-element>current-time-lit-element loading...</current-time-lit-element></strong></p>
-          <p>lit-element/lit-html <strong>with shdowdom</strong> native support android chrome 60+/mobile safari (android 4.4 default, ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a>, <a href="https://caniuse.com/#search=attachShadow" target="_blank">webcomponentsjs.js</a> polyfills)</p>
-          <p>
-            <strong>android 4.4 default(ex- samsung internet)/ie 11+ support demo</strong>
-            <a href="https://qpitlove.github.io/todo-web-components" target="_blank">todo-web-components</a>
-            <a href="https://qpitlove.github.io/open-wc-app" target="_blank">open-wc-app</a> from build <a href="https://open-wc.org/" target="_blank">npm init @open-wc</a>
+          <p><strong style="background-color:lightgray"><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></strong></p>
+          <p>lit-html <strong>without shadow DOM</strong> (with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> polyfill)
+            support android 4.2+, (ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a> polyfills)
           </p>
+        </li>
+        <li>
+          <p><strong style="background-color:lightgray"><current-time-lit-element>current-time-lit-element loading...</current-time-lit-element></strong></p>
+          <p>lit-element/lit-html <strong><a href="https://caniuse.com/#search=attachShadow" target="_blank">with shadow DOM</a></strong>
+            <div><strong>Native support</strong> android chrome 60+, samsung internet 6.2+, ios safari 10+</div>
+            <div><strong>Polyfill support</strong> android == 4.4.x, samsung internet <= 5.4, ios safari <= 9.3, ie 11 need <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a>, webcomponentsjs.js polyfills</div>
+          </p>
+          <ul>
+            <li><a href="https://qpitlove.github.io/todo-web-components" target="_blank">todo-web-components</a></li>
+            <li><a href="https://qpitlove.github.io/open-wc-app" target="_blank">open-wc-app</a> from build <a href="https://open-wc.org/" target="_blank">npm init @open-wc</a></li>
+          </ul>
         </li>
       </ul>
     </main>
