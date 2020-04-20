@@ -27,22 +27,29 @@
       <ul>
         <li>
           <p><strong style="background-color:lightgray"><current-time>current-time loading...</current-time></strong></p>
-          <p>only custom-element(with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> polyfill) support android 2.2+, ie 10+</p>
+          <p>custom-element only</p>
+          <ul>
+            <li><strong>Polyfill support</strong> android 2.2+, ie 8+ with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> polyfill</li>
+          </ul>
         </li>
         <li>
           <p><strong style="background-color:lightgray"><current-time-lit-html>current-time-lit-html loading...</current-time-lit-html></strong></p>
-          <p>lit-html <strong>without shadow DOM</strong> (with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a>, webcomponentsjs.js polyfills)
-            support android 4.2+, (ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a> polyfills)
+          <p>lit-html <strong>without shadow DOM</strong>
+          <ul>
+            <li><strong>Polyfill support</strong> android 4.2+ with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> + webcomponents-bundle.js polyfills</li>
+            <li><strong>Polyfill support</strong> ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a> + webcomponents-bundle.js polyfills</li>
+          </ul>
           </p>
         </li>
         <li>
           <p><strong style="background-color:lightgray"><current-time-lit-element>current-time-lit-element loading...</current-time-lit-element></strong></p>
           <p>lit-element/lit-html <strong><a href="https://caniuse.com/#search=attachShadow" target="_blank">with shadow DOM</a></strong>
             <div><strong>Native support</strong> android chrome 60+, samsung internet 6.2+, ios safari 10+</div>
-            <div><strong>Polyfill support</strong> android == 4.4.x, samsung internet <= 5.4, ios safari <= 9.3, ie 11 need <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a>, webcomponentsjs.js polyfills</div>
+            <div><strong>Polyfill support</strong> android == 4.4.x, samsung internet <= 5.4, ios safari <= 9.3, ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a> + webcomponents-bundle.js polyfills</div>
           </p>
+          <strong>Demo:</strong>
           <ul>
-            <li><a href="https://qpitlove.github.io/todo-web-components" target="_blank">todo-web-components</a></li>
+            <li><a href="https://qpitlove.github.io/todo-web-components" target="_blank">todo-web-components</a> from build <a href="https://github.io/qpitlove/todo-web-components" target="_blank">todo-web-components</a></li>
             <li><a href="https://qpitlove.github.io/open-wc-app" target="_blank">open-wc-app</a> from build <a href="https://open-wc.org/" target="_blank">npm init @open-wc</a></li>
           </ul>
         </li>
