@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "webpack-dev-server --history-api-fallback --env.mode development --hot",
     "build": "webpack --env.mode production",
+    "serve:build": "npx serve",
     "gh-publish": "npm run build && gh-pages -d dist"
   },
   "repository": {
