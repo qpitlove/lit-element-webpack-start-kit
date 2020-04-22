@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WC Support Test</title>
+    <title>WebComponent Support Test</title>
 
     <link rel="icon" type="image/png" href="imgs/icons/favicon.png" />
 
-    <!-- https://qpitlove.github.io/open-wc-app/ 참고하여 IE 11에서 동작하는 폴리필을 기능 사용여부 체크하여 직접 CDN 경로로 삽입함 -->
+    <!-- IE 11에서 동작하는 폴리필을 기능 사용여부 체크 하여 직접 CDN 경로로 삽입함 -->
     <script>('noModule' in HTMLScriptElement.prototype)||document.write('<script src="//unpkg.com/core-js-bundle@3.6.5/minified.js"><\x2fscript>');</script>
-    <!-- <script>('fetch' in window)||document.write('<script src="//unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"><\x2fscript>');</script> -->
     <script>('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-bundle.js"><\x2fscript>');</script>
-    <script>('noModule' in HTMLScriptElement.prototype || 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"><\x2fscript>');</script>
+    <!-- fallback customElements polyfill only for android <= 4.3, ie <= 10 -->
+    <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
 
+    <!-- <script>('noModule' in HTMLScriptElement.prototype)||document.write('<script src="//unpkg.com/core-js-bundle@3.6.5/minified.js"><\x2fscript>');</script> -->
+    <!-- <script>('fetch' in window)||document.write('<script src="//unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"><\x2fscript>');</script> -->
+    <!-- <script>('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-bundle.js"><\x2fscript>');</script> -->
+    <!-- <script>('noModule' in HTMLScriptElement.prototype || 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/custom-elements-es5-adapter.js"><\x2fscript>');</script> -->
    	<!-- fallback polyfill for customElements only for android <= 4.3, ie <= 10 -->
-	  <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
+    <!-- <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script> -->
+
   </head>
   <body>
     <script>

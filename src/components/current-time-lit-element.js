@@ -13,7 +13,6 @@ class CurrentTimeLitElement extends LitElement {
   }
   connectedCallback() {
     super.connectedCallback();
-    this.now = new Date().toLocaleString(this.locale);
     this.start();
   }
   disconnectedCallback() {
@@ -34,7 +33,7 @@ class CurrentTimeLitElement extends LitElement {
     }
   }
   render() {
-    return html`${this.now}`;
+    return html`${this.now || html`<slot></slot>`}`;
   }
 }
 
