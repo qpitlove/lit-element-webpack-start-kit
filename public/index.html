@@ -9,7 +9,7 @@
 
     <!-- IE 11에서 동작하는 폴리필을 기능 사용여부 체크 하여 직접 CDN 경로로 삽입함 -->
     <script>('noModule' in HTMLScriptElement.prototype)||document.write('<script src="//unpkg.com/core-js-bundle@3.6.5/minified.js"><\x2fscript>');</script>
-    <script>('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-bundle.js"><\x2fscript>');</script>
+    <script>('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype)||document.write('<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"><\x2fscript>');</script>
     <!-- fallback customElements polyfill only for android <= 4.3, ie <= 10 -->
     <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
 
@@ -41,7 +41,7 @@
           <p><strong style="background-color:lightgray"><current-time-lit-html locale="ko-KR">current-time-lit-html loading...</current-time-lit-html></strong></p>
           <p>lit-html <strong>without shadow DOM</strong></p>
           <ul>
-            <li><strong>Polyfill support</strong> android 4.2.x default browser with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> + webcomponents-bundle.js polyfills</li>
+            <li><strong>Polyfill support</strong> android 4.2+ default browser with legacy <a href="https://github.com/WebReflection/document-register-element#tested-on" target="_blank">document-register-element</a> + webcomponents-bundle.js polyfills</li>
             <li><strong>Polyfill support</strong> ie 11 with <a href="https://caniuse.com/#search=noModule" target="_blank">core-js-bundle</a> + webcomponents-bundle.js polyfills</li>
           </ul>
         </li>
