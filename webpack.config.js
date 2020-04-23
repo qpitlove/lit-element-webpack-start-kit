@@ -78,7 +78,7 @@ module.exports = ({ mode, presets }) => {
           {
             test: /\.js$/,
             // exclude: /node_modules/,
-            exclude: /node_modules\/(?!(@webcomponents\/shadycss|lit-element|lit-html)\/).*/,
+            exclude: /node_modules\/(?!(@webcomponents|lit-element|lit-html)\/).*/,
             loader: "babel-loader",
             options: {
               plugins: ["@babel/plugin-transform-runtime"],
