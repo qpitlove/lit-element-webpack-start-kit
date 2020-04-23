@@ -1,8 +1,8 @@
 {
   "name": "lit-element-webpack-start-kit",
   "version": "1.0.0",
-  "description": "This is a PWA tutorial app. You can find the tutorial on the [Vaadin website](https://vaadin.com/progressive-web-applications).",
-  "main": "sw.js",
+  "description": "This is a Lit Element tutorial app. You can find the tutorial on the [lit-element-webpack-start-kit github](https://github.com/qpitlove/lit-element-webpack-start-kit).",
+  "main": "main.js",
   "scripts": {
     "serve": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --env.mode development --hot",
     "build": "webpack --env.mode production",
