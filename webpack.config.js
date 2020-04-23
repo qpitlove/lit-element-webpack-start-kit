@@ -1,17 +1,24 @@
 const webpack = require("webpack");
 const { resolve } = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpackMerge = require("webpack-merge");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 
 const modeConfig = (env) =>
   require(`./build-utils/webpack.${env.mode}.js`)(env);
 
-const documentregisterEl = "./node_modules/document-register-element";
+const corejs = "./node_modules/core-js-bundle";
 const webcomponentsjs = "./node_modules/@webcomponents/webcomponentsjs";
+const documentregisterEl = "./node_modules/document-register-element";
 
 const polyfills = [
+  {
+    from: resolve(`${corejs}/*.{js,map}`),
+    to: "vendor/core-js",
+    flatten: true,
+  },
   {
     from: resolve(`${webcomponentsjs}/webcomponents-*.{js,map}`),
     to: "vendor",
@@ -44,13 +51,22 @@ const assets = [
 const plugins = [
   new CleanWebpackPlugin(),
   new webpack.ProgressPlugin(),
+  new CopyWebpackPlugin([...polyfills, ...assets], {
+    ignore: [".DS_Store"],
+  }),
   new HtmlWebpackPlugin({
     filename: "index.html",
     template: "./public/index.html",
     minify: false,
   }),
-  new CopyWebpackPlugin([...polyfills, ...assets], {
-    ignore: [".DS_Store"],
+  new HtmlWebpackTagsPlugin({
+    tags: [
+      "vendor/core-js/minified.js",
+      "vendor/webcomponents-loader.js",
+      "vendor/document-register-element.js",
+    ],
+    useHash: true,
+    append: false,
   }),
 ];
 
